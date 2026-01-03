@@ -1,0 +1,61 @@
+{
+  "name": "atostate",
+  "version": "0.1.0",
+  "description": "A lightweight state management library for JavaScript and TypeScript.",
+  "license": "MIT",
+  "author": "Mahmoud Shahin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahmoudshahin1111/atostate"
+  },
+  "homepage": "https://github.com/mahmoudshahin1111/atostate#readme",
+  "bugs": {
+    "url": "https://github.com/mahmoudshahin1111/atostate/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.ts",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+
+  "files": [
+    "dist"
+  ],
+
+  "scripts": {
+    "build": "rollup -c ",
+    "test": "npm run test"
+  },
+
+  "keywords": [
+    "state",
+    "state-management",
+    "store",
+    "global-state",
+    "reactive",
+    "observable",
+    "pubsub",
+    "flux",
+    "redux-alternative",
+    "zustand-alternative",
+    "lightweight",
+    "tiny",
+    "typescript",
+    "javascript",
+    "framework-agnostic",
+    "frontend"
+  ],
+
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.3.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  }
+}
