@@ -1,8 +1,8 @@
-# atostate
+# Atostate
 
 > A tiny, framework-agnostic state management library for JavaScript and TypeScript.
 
-**atostate** provides a simple, predictable global store with subscriptions, selectors, middleware, and optional reducer-based updates without the complexity or boilerplate of large state libraries.
+**Atostate** provides a simple, predictable global store with subscriptions, selectors, middleware, and optional reducer-based updates without the complexity or boilerplate of large state libraries.
 
 ---
 
