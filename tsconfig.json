@@ -8,7 +8,6 @@
     /* Module System */
     "module": "ESNext",                // Standard for both modern Node and Bundlers
     "moduleResolution": "bundler",     // Supports package.json exports while remaining flexible
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,           // Required for most web bundlers and transpilers
 
