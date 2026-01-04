@@ -1,6 +1,6 @@
 {
   "name": "atostate",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A lightweight state management library for JavaScript and TypeScript.",
   "license": "MIT",
   "author": "Mahmoud Shahin",
