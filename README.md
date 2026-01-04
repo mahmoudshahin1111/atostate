@@ -1,8 +1,7 @@
 [![npm version](https://img.shields.io/npm/v/atostate)](https://www.npmjs.com/package/atostate)
 [![npm downloads](https://img.shields.io/npm/dm/atostate)](https://www.npmjs.com/package/atostate)
-[![build](https://img.shields.io/github/actions/workflow/status/mahmoudshahin/atostate/release.yml?branch=main)](https://github.com/mahmoudshahin/atostate/actions)
+[![build](https://img.shields.io/github/actions/workflow/status/mahmoudshahin1111/atostate/release.yml?branch=master)](https://github.com/mahmoudshahin1111/atostate/actions)
 [![license](https://img.shields.io/npm/l/atostate)](LICENSE)
-
 
 # Atostate
 
@@ -10,17 +9,16 @@
 
 **Atostate** provides a simple, predictable global store with subscriptions, selectors, middleware, and optional reducer-based updates without the complexity or boilerplate of large state libraries.
 
-
 ## Features
 
-* ✅ Single global store
-* ✅ TypeScript-first, fully typed
-* ✅ Selective subscriptions via selectors
-* ✅ Custom equality checks
-* ✅ Optional reducer / dispatch pattern
-* ✅ Middleware support
-* ✅ Batched updates (microtask-based)
-* ✅ Framework-agnostic (React, Vue, Vanilla JS)
+- ✅ Single global store
+- ✅ TypeScript-first, fully typed
+- ✅ Selective subscriptions via selectors
+- ✅ Custom equality checks
+- ✅ Optional reducer / dispatch pattern
+- ✅ Middleware support
+- ✅ Batched updates (microtask-based)
+- ✅ Framework-agnostic (React, Vue, Vanilla JS)
 
 ---
 
@@ -43,7 +41,7 @@ yarn add atostate
 ### Create a store
 
 ```ts
-import { createStore } from "atostate";
+import { createStore } from 'atostate';
 
 type State = {
   count: number;
@@ -83,7 +81,7 @@ store.setState((prev) => ({
 
 ```ts
 const unsubscribe = store.subscribe(() => {
-  console.log("State changed:", store.getState());
+  console.log('State changed:', store.getState());
 });
 ```
 
@@ -95,8 +93,8 @@ const unsubscribe = store.subscribe(() => {
 store.subscribe(
   (state) => state.count,
   (count, prev) => {
-    console.log("Count changed:", prev, "→", count);
-  }
+    console.log('Count changed:', prev, '→', count);
+  },
 );
 ```
 
@@ -105,14 +103,14 @@ store.subscribe(
 ### Custom equality comparison
 
 ```ts
-import { shallowEqual } from "atostate";
+import { shallowEqual } from 'atostate';
 
 store.subscribe(
   (state) => state.user,
   (user) => {
-    console.log("User changed:", user);
+    console.log('User changed:', user);
   },
-  shallowEqual
+  shallowEqual,
 );
 ```
 
@@ -143,27 +141,22 @@ counter.reset();
 For a Redux-style workflow.
 
 ```ts
-type Action =
-  | { type: "inc" }
-  | { type: "set"; value: number };
+type Action = { type: 'inc' } | { type: 'set'; value: number };
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
-    case "inc":
+    case 'inc':
       return { ...state, count: state.count + 1 };
-    case "set":
+    case 'set':
       return { ...state, count: action.value };
     default:
       return state;
   }
 }
 
-const store = createStore<State, Action>(
-  { count: 0 },
-  { reducer }
-);
+const store = createStore<State, Action>({ count: 0 }, { reducer });
 
-store.dispatch({ type: "inc" });
+store.dispatch({ type: 'inc' });
 ```
 
 ---
@@ -173,13 +166,13 @@ store.dispatch({ type: "inc" });
 ### Logger
 
 ```ts
-import { loggerMiddleware } from "atostate";
+import { loggerMiddleware } from 'atostate';
 
 const store = createStore(
   { count: 0 },
   {
-    middleware: [loggerMiddleware("app")],
-  }
+    middleware: [loggerMiddleware('app')],
+  },
 );
 ```
 
@@ -188,15 +181,13 @@ const store = createStore(
 ### Persistence (localStorage)
 
 ```ts
-import { persistMiddleware } from "atostate";
+import { persistMiddleware } from 'atostate';
 
 const store = createStore(
   { count: 0 },
   {
-    middleware: [
-      persistMiddleware("app-state"),
-    ],
-  }
+    middleware: [persistMiddleware('app-state')],
+  },
 );
 ```
 
@@ -222,11 +213,11 @@ createStore(initialState, { batch: false });
 
 ## Why atostate?
 
-* Minimal API surface
-* Predictable state updates
-* No framework lock-in
-* Easy to debug
-* Easy to extend
+- Minimal API surface
+- Predictable state updates
+- No framework lock-in
+- Easy to debug
+- Easy to extend
 
 Think of **atostate** as:
 
@@ -237,4 +228,3 @@ Think of **atostate** as:
 ## License
 
 MIT
-
