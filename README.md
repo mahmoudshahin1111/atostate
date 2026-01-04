@@ -1,10 +1,15 @@
+[![npm version](https://img.shields.io/npm/v/atostate)](https://www.npmjs.com/package/atostate)
+[![npm downloads](https://img.shields.io/npm/dm/atostate)](https://www.npmjs.com/package/atostate)
+[![build](https://img.shields.io/github/actions/workflow/status/mahmoudshahin/atostate/release.yml?branch=main)](https://github.com/mahmoudshahin/atostate/actions)
+[![license](https://img.shields.io/npm/l/atostate)](LICENSE)
+
+
 # Atostate
 
 > A tiny, framework-agnostic state management library for JavaScript and TypeScript.
 
 **Atostate** provides a simple, predictable global store with subscriptions, selectors, middleware, and optional reducer-based updates without the complexity or boilerplate of large state libraries.
 
----
 
 ## Features
 
@@ -233,4 +238,3 @@ Think of **atostate** as:
 
 MIT
 
----
