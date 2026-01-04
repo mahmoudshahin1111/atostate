@@ -44,6 +44,14 @@ or
 </script>
 ```
 
+or CDN
+
+```html
+<script type="module">
+  import { createStore } from 'https://cdn.jsdelivr.net/npm/atostate@0.1.9/+esm';
+</script>
+```
+
 ## Basic Usage
 
 ### Create a store
