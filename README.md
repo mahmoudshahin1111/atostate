@@ -2,12 +2,13 @@
 [![npm downloads](https://img.shields.io/npm/dm/atostate)](https://www.npmjs.com/package/atostate)
 [![build](https://img.shields.io/github/actions/workflow/status/mahmoudshahin1111/atostate/release.yml?branch=master)](https://github.com/mahmoudshahin1111/atostate/actions)
 [![license](https://img.shields.io/npm/l/atostate)](LICENSE)
+
 # Atostate
+
 > A tiny, tool state management library for JavaScript and TypeScript.
-**Atostate** provides a simple, predictable global store with subscriptions, selectors, middleware, and optional reducer-based updates without the complexity or boilerplate of large state libraries.
+> **Atostate** provides a simple, predictable global store with subscriptions, selectors, middleware, and optional reducer-based updates without the complexity or boilerplate of large state libraries.
 
 <img width="396" height="557" alt="image1" src="https://github.com/user-attachments/assets/39382c75-761c-46ec-b874-1cf1828f7319" />
-
 
 ## Features
 
@@ -34,7 +35,14 @@ or
 yarn add atostate
 ```
 
----
+or
+
+```html
+<script src="index.browser.iife.js"></script>
+<script>
+  const { createStore } = atostate;
+</script>
+```
 
 ## Basic Usage
 
