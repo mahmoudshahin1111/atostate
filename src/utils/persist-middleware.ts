@@ -1,4 +1,4 @@
-import { PersistOptions, Middleware } from "../types/index";
+import { PersistOptions, Middleware } from '../types/index';
 
 /**
  * Persist partial/full state to storage (default: localStorage).
@@ -6,32 +6,26 @@ import { PersistOptions, Middleware } from "../types/index";
  */
 export function persistMiddleware<S extends object, A = unknown>(
   key: string,
-  opts: PersistOptions<S> = {}
+  opts: PersistOptions<S> = {},
 ): Middleware<S, A> {
   const {
     serialize = JSON.stringify,
     deserialize = JSON.parse,
-    storage = typeof localStorage !== "undefined" ? localStorage : undefined,
+    storage = typeof localStorage !== 'undefined' ? localStorage : undefined,
   } = opts;
 
   return (store) => {
     if (!storage) return store;
 
-    // hydrate once
     try {
       const raw = storage.getItem(key);
       if (raw != null) store.setState(deserialize(raw) as Partial<S>);
-    } catch {
-      // ignore
-    }
+    } catch {}
 
-    // save on changes
     store.subscribe(() => {
       try {
         storage.setItem(key, serialize(store.getState()));
-      } catch {
-        // ignore
-      }
+      } catch {}
     });
 
     return store;
