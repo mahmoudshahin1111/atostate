@@ -1,21 +1,17 @@
 {
   "compilerOptions": {
-    /* Target & Environment */
-    "target": "es2024", // High enough for Node 18+, compatible with modern browsers
-    "lib": ["ESNext", "DOM", "DOM.Iterable"], // Includes both JS and Browser APIs (window, document)
-    "types": ["node"], // Explicitly include Node types (process, __dirname)
+    "target": "es2024",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["node"],
     "outDir": "dist",
-    /* Module System */
-    "module": "ESNext", // Standard for both modern Node and Bundlers
-    "moduleResolution": "bundler", // Supports package.json exports while remaining flexible
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "isolatedModules": true, // Required for most web bundlers and transpilers
-
-    /* Interop & Strictness */
-    "esModuleInterop": true, // Compatibility with CommonJS modules
+    "isolatedModules": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true // Speeds up build by skipping type checks in node_modules
+    "skipLibCheck": true
   },
   "include": ["src/**/*"]
 }
